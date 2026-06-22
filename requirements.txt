@@ -1,0 +1,5 @@
+fastapi
+uvicorn
+earthengine-api
+jinja2
+python-multipart

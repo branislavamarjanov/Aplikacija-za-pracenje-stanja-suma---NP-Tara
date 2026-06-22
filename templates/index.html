@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <title>Praćenje stanja šuma - NP Tara</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="sidebar">
+<div class="logo-container">
+    <img src="/static/logo.png" class="logo">
+</div>
+
+<h1>Praćenje stanja šuma</h1>
+
+
+<label>Tip prikaza:</label>
+
+<select id="mode">
+    <option value="state" selected>Prikaz stanja</option>
+    <option value="change">Analiza promena</option>
+    <option value="additional">Dodatni podaci</option>
+</select>
+   <div id="singleYear">
+
+    <label>Godina:</label>
+
+    <select id="year">
+        <option>2017</option>
+        <option>2018</option>
+        <option>2019</option>
+        <option>2020</option>
+        <option>2021</option>
+        <option>2022</option>
+        <option>2023</option>
+        <option selected>2024</option>
+    </select>
+
+</div>
+
+<div id="changeYears" style="display:none;">
+
+    <label>Godina od:</label>
+
+    <select id="yearFrom">
+        <option selected>2017</option>
+        <option>2018</option>
+        <option>2019</option>
+        <option>2020</option>
+        <option>2021</option>
+        <option>2022</option>
+        <option>2023</option>
+        <option>2024</option>
+    </select>
+
+    <label>Godina do:</label>
+
+    <select id="yearTo">
+        <option>2017</option>
+        <option>2018</option>
+        <option>2019</option>
+        <option>2020</option>
+        <option>2021</option>
+        <option>2022</option>
+        <option>2023</option>
+        <option selected>2024</option>
+    </select>
+
+</div>
+
+    <label>Sloj:</label>
+
+<select id="layer">
+    <option value="ndvi" selected>NDVI</option>
+    <option value="evi">EVI</option>
+    <option value="nbr">NBR</option>
+</select>
+
+    <button id="showBtn">
+        Prikaži sloj
+    </button>
+    <div id="stats" class="stats-box">
+    Statistika
+    </div>
+    <div id="legend" class="legend-box">
+    Legenda
+    </div>
+<canvas id="forestChart"></canvas>
+</div>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="/static/app.js"></script>
+
+</body>
+</html>

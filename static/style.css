@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 420px;
+    height: 100vh;
+    background: linear-gradient(180deg, #012a1c 0%, #014421 50%, #012a1c 100%);
+    color: white;
+    z-index: 1000;
+    padding: 25px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    box-shadow: 3px 0 10px rgba(0,0,0,0.35);
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.logo {
+    width: 220px;
+    border-radius: 10px;
+    background: white;
+    padding: 8px;
+}
+
+.sidebar h1 {
+    color: white;
+    font-size: 34px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.sidebar label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: white;
+    font-size: 15px;
+}
+
+.sidebar select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.25);
+    background: rgba(255,255,255,0.10);
+    color: white;
+    font-size: 15px;
+}
+
+.sidebar select option {
+    color: black;
+}
+
+.sidebar button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    background: #40916c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.sidebar button:hover {
+    background: #2d6a4f;
+}
+
+#stats,
+#legend {
+    background: rgba(255,255,255,0.10);
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    color: white;
+    line-height: 1.6;
+}
+
+#forestChart {
+    width: 100%;
+    height: 250px;
+    margin-top: 20px;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#map {
+    position: absolute;
+    left: 420px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}

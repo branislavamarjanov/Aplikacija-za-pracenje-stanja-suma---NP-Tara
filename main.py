@@ -2,8 +2,23 @@ from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 import ee
+import os
+import json
 
-ee.Initialize(project="ee-bmarjanov1102")
+
+service_account_info = os.getenv("GOOGLE_SERVICE_ACCOUNT")
+project_id = os.getenv("GEE_PROJECT", "ee-bmarjanov1102")
+
+if service_account_info:
+    service_account_dict = json.loads(service_account_info)
+    credentials = ee.ServiceAccountCredentials(
+        service_account_dict["client_email"],
+        key_data=service_account_info
+    )
+    ee.Initialize(credentials, project=project_id)
+else:
+    ee.Initialize(project=project_id)
+
 
 app = FastAPI()
 
